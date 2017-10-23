@@ -1,0 +1,5 @@
+C:\Users\Jung\Desktop\KISA\source>python json_to_csv_v.1_1.py
+  File "json_to_csv_v.1_1.py", line 11
+SyntaxError: Non-UTF-8 code starting with '\xb5' in file json_to_csv_v.1_1.py on line 11, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for
+ details
+
