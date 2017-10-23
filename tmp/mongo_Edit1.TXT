@@ -13,6 +13,11 @@ C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Wizvera\Delfino;D:\or
 C:\Program Files\Java\jdk1.8.0_144\;C:\Users\Jung\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\Jung\AppData\Local\Programs\Python\Python35\;C:\Program Files (x86)\IDM Computer Solutions\UEStudio
 
 ######################################################
+#  python connection
+
+
+
+######################################################
 # mongodb 서버 데몬 기동
 # 기동시 dbpath 옵션 사용(인스턴스 설정)
 mongod --dbpath D:\data\test
