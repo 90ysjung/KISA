@@ -1,0 +1,34 @@
+mongoexport --host 192.168.100.186:27017 --db ctas --collection COLLECT_C0002 --username ctas01 --password kisa.01 --type=json --jsonArray --pretty --out C:\Users\DataStreams1\Desktop\json\COLLECT_C0002.json
+
+
+mongoexport --host 192.168.100.186:27017 --db ctas --collection COLLECT_C0023 --username ctas01 --password kisa.01 --type=csv --fields date --out C:\date\date_C0023.csv
+mongoexport --host 192.168.100.186:27017 --db ctas --collection COLLECT_C0007 --username ctas01 --password kisa.01 --type=csv --fields date --out C:\date\date_C0007.csv
+mongoexport --host 192.168.100.186:27017 --db ctas --collection COLLECT_C0030 --username ctas01 --password kisa.01 --type=csv --fields date --out C:\date\date_C0030.csv
+mongoexport --host 192.168.100.186:27017 --db ctas --collection COLLECT_C0021 --username ctas01 --password kisa.01 --type=csv --fields date --out C:\date\date_C0021.csv
+mongoexport --host 192.168.100.186:27017 --db ctas --collection COLLECT_C0008 --username ctas01 --password kisa.01 --type=csv --fields date --out C:\date\date_C0008.csv
+mongoexport --host 192.168.100.186:27017 --db ctas --collection COLLECT_C0027 --username ctas01 --password kisa.01 --type=csv --fields date --out C:\date\date_C0027.csv
+mongoexport --host 192.168.100.186:27017 --db ctas --collection COLLECT_C0002 --username ctas01 --password kisa.01 --type=csv --fields date --out C:\date\date_C0002.csv
+mongoexport --host 192.168.100.186:27017 --db ctas --collection COLLECT_C0006 --username ctas01 --password kisa.01 --type=csv --fields date --out C:\date\date_C0006.csv
+mongoexport --host 192.168.100.186:27017 --db ctas --collection COLLECT_C0001 --username ctas01 --password kisa.01 --type=csv --fields date --out C:\date\date_C0001.csv
+mongoexport --host 192.168.100.186:27017 --db ctas --collection COLLECT_C0009 --username ctas01 --password kisa.01 --type=csv --fields date --out C:\date\date_C0009.csv
+mongoexport --host 192.168.100.186:27017 --db ctas --collection COLLECT_C0005 --username ctas01 --password kisa.01 --type=csv --fields date --out C:\date\date_C0005.csv
+
+
+mongoexport --host 192.168.100.186:27017 --db ctas --collection COLLECT_C0007 --username ctas01 --password kisa.01 --type=csv --fields kisa:ccs.kisa:address --out C:\Users\DataStreams1\Desktop\json\field_C0007.csv
+
+ex. 1~200 까지 스킵 후, 모두 추출
+
+mongoexport -d db명 -c 테이블명 --skip 200 --out export.2
+
+ 
+
+
+ex. 1~100까지 추출
+
+mongoexport -d db명 -c 테이블명 --limit 100 --out export.2
+
+ 
+
+ex. 1~200 까지 스킵 후, 100개 추출
+
+mongoexport -d db명 -c 테이블명 --limit 100 --skip 200 --out export.2
