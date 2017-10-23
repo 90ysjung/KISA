@@ -15,7 +15,13 @@ C:\Program Files\Java\jdk1.8.0_144\;C:\Users\Jung\AppData\Local\Programs\Python\
 ######################################################
 #  python connection
 
+import pymongo
+from pymongo import MongoClient
 
+conn = pymongo.MongoClient("192.168.100.186", 27017)
+
+db = conn.ctas
+collection = db.COLLECT_C0008
 
 ######################################################
 # mongodb 서버 데몬 기동
