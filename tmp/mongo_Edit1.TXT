@@ -1,0 +1,150 @@
+﻿C:\Program Files\MongoDB\Server\3.4\bin
+
+MONGO_HOME=C:\Program Files\MongoDB\Server\3.4
+
+C:\Program Files\Java\jdk1.8.0_144\;C:\Users\Jung\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\Jung\AppData\Local\Programs\Python\Python35\;C:\Program Files (x86)\IDM Computer Solutions\UEStudio;%MONGO_HOME%\bin
+C:\Program Files\Java\jdk1.8.0_144
+%JAVA_HOME%
+
+;%MONGO_HOME%\bin
+
+
+C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Wizvera\Delfino;D:\oracle\product\11.2.0\client_1\bin;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\
+C:\Program Files\Java\jdk1.8.0_144\;C:\Users\Jung\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\Jung\AppData\Local\Programs\Python\Python35\;C:\Program Files (x86)\IDM Computer Solutions\UEStudio
+
+######################################################
+# mongodb 서버 데몬 기동
+# 기동시 dbpath 옵션 사용(인스턴스 설정)
+mongod --dbpath D:\data\test
+
+# 서버 정지
+use admin
+db.shutdownServer()
+
+# client 실행
+mongo
+
+# collections 생성 예제
+db.createCollection("emp_1", {capped:true, size:1000000000, max:100000});
+
+# collections 삭제 예제
+db.emp_1.drop();
+
+# collection 이름 변경
+db.emp_1.renameCollection("emp_test");
+
+
+### 데이터 저장 방법
+# collection 생성 후 insert 하는 방법
+# json 형식으로 객게 정의 후 저장하는 방법
+
+n = {col: "test"}
+m = {col: "0001"}
+
+db.things.save(n)
+db.things.save(m)
+
+# update 문 예제
+db.test_2.update({eno:"0001"},{$set:{eno:0001}})
+
+
+### 백업 정책
+# mongodump -> mongorestore
+# mongoexport -> mongoimport
+# collection 생성시는 db 생성 선행 안 해도 되나, mongoimport 시는 db 생성 선행 되어야 함
+
+'''
+mongoimport -d test -c date_C0001 --file C:\Users\Jung\Desktop\KISA\data\date_C0001.json
+mongoimport -d test -c date_C0002 --file C:\Users\Jung\Desktop\KISA\data\date_C0002.json
+mongoimport -d test -c date_C0005 --file C:\Users\Jung\Desktop\KISA\data\date_C0005.json
+mongoimport -d test -c date_C0006 --file C:\Users\Jung\Desktop\KISA\data\date_C0006.json
+mongoimport -d test -c date_C0007 --file C:\Users\Jung\Desktop\KISA\data\date_C0007.json
+mongoimport -d test -c date_C0008 --file C:\Users\Jung\Desktop\KISA\data\date_C0008.json
+mongoimport -d test -c date_C0009 --file C:\Users\Jung\Desktop\KISA\data\date_C0009.json
+mongoimport -d test -c date_C0021 --file C:\Users\Jung\Desktop\KISA\data\date_C0021.json
+mongoimport -d test -c date_C0023 --file C:\Users\Jung\Desktop\KISA\data\date_C0023.json
+mongoimport -d test -c date_C0027 --file C:\Users\Jung\Desktop\KISA\data\date_C0027.json
+mongoimport -d test -c date_C0030 --file C:\Users\Jung\Desktop\KISA\data\date_C0030.json
+
+mongoexport --host 127.0.0.1 --db test --collection date_C0001 --out D:\py_test\data\kisa_test\date_C0001.json --jsonArray
+mongoexport --host 127.0.0.1 --db test --collection date_C0002 --out D:\py_test\data\kisa_test\date_C0002.json --jsonArray
+mongoexport --host 127.0.0.1 --db test --collection date_C0005 --out D:\py_test\data\kisa_test\date_C0005.json --jsonArray
+mongoexport --host 127.0.0.1 --db test --collection date_C0006 --out D:\py_test\data\kisa_test\date_C0006.json --jsonArray
+mongoexport --host 127.0.0.1 --db test --collection date_C0007 --out D:\py_test\data\kisa_test\date_C0007.json --jsonArray
+mongoexport --host 127.0.0.1 --db test --collection date_C0008 --out D:\py_test\data\kisa_test\date_C0008.json --jsonArray
+mongoexport --host 127.0.0.1 --db test --collection date_C0009 --out D:\py_test\data\kisa_test\date_C0009.json --jsonArray
+mongoexport --host 127.0.0.1 --db test --collection date_C0021 --out D:\py_test\data\kisa_test\date_C0021.json --jsonArray
+mongoexport --host 127.0.0.1 --db test --collection date_C0023 --out D:\py_test\data\kisa_test\date_C0023.json --jsonArray
+mongoexport --host 127.0.0.1 --db test --collection date_C0027 --out D:\py_test\data\kisa_test\date_C0027.json --jsonArray
+mongoexport --host 127.0.0.1 --db test --collection date_C0030 --out D:\py_test\data\kisa_test\date_C0030.json --jsonArray
+'''
+
+# --jsonArray
+mongoexport --host 192.168.100.186:27017 --username ctas01 --password kisa.01 --db ctas --collection COLLECT_C0023 --out C:\ysjung\KISA\data\COLLECT_C0023.json --limit 100 --jsonArray
+mongoexport --host 192.168.100.186:27017 --username ctas01 --password kisa.01 --db ctas --collection COLLECT_C0007 --out C:\ysjung\KISA\data\COLLECT_C0007.json --limit 100 --jsonArray
+mongoexport --host 192.168.100.186:27017 --username ctas01 --password kisa.01 --db ctas --collection COLLECT_C0030 --out C:\ysjung\KISA\data\COLLECT_C0030.json --limit 100 --jsonArray
+mongoexport --host 192.168.100.186:27017 --username ctas01 --password kisa.01 --db ctas --collection COLLECT_C0021 --out C:\ysjung\KISA\data\COLLECT_C0021.json --limit 100 --jsonArray
+mongoexport --host 192.168.100.186:27017 --username ctas01 --password kisa.01 --db ctas --collection COLLECT_C0008 --out C:\ysjung\KISA\data\COLLECT_C0008.json --limit 100 --jsonArray
+mongoexport --host 192.168.100.186:27017 --username ctas01 --password kisa.01 --db ctas --collection COLLECT_C0027 --out C:\ysjung\KISA\data\COLLECT_C0027.json --limit 100 --jsonArray
+mongoexport --host 192.168.100.186:27017 --username ctas01 --password kisa.01 --db ctas --collection COLLECT_C0002 --out C:\ysjung\KISA\data\COLLECT_C0002.json --limit 100 --jsonArray
+mongoexport --host 192.168.100.186:27017 --username ctas01 --password kisa.01 --db ctas --collection COLLECT_C0006 --out C:\ysjung\KISA\data\COLLECT_C0006.json --limit 100 --jsonArray
+mongoexport --host 192.168.100.186:27017 --username ctas01 --password kisa.01 --db ctas --collection COLLECT_C0001 --out C:\ysjung\KISA\data\COLLECT_C0001.json --limit 123 --jsonArray
+mongoexport --host 192.168.100.186:27017 --username ctas01 --password kisa.01 --db ctas --collection COLLECT_C0009 --out C:\ysjung\KISA\data\COLLECT_C0009.json --limit 100 --jsonArray
+mongoexport --host 192.168.100.186:27017 --username ctas01 --password kisa.01 --db ctas --collection COLLECT_C0005 --out C:\ysjung\KISA\data\COLLECT_C0005.json --limit 100 --jsonArray
+
+mongoexport --host 192.168.100.186:27017 --username ctas01 --password kisa.01 --db ctas --collection COLLECT_C8000 --out C:\ysjung\KISA\data\COLLECT_C8000.json --limit 20000 --jsonArray
+mongoexport --host 192.168.100.186:27017 --username ctas01 --password kisa.01 --db ctas --collection COLLECT_C8000 --out C:\ysjung\KISA\data\COLLECT_C8000_5.json --limit 5 --jsonArray
+
+
+# csv
+mongoexport --host 192.168.100.186:27017 --username ctas01 --password kisa.01 --db ctas --collection COLLECT_C8000 --type=csv --out C:\ysjung\KISA\data\COLLECT_C8000_csv.csv --limit 200
+mongoexport --host 192.168.100.186:27017 --username ctas01 --password kisa.01 --db ctas --collection COLLECT_C8000 --type=csv --out C:\ysjung\KISA\data\COLLECT_C8000_csv.csv --fields ctex:externals --limit 10
+
+mongoexport --host 192.168.100.186:27017 --username ctas01 --password kisa.01 --db ctas --collection COLLECT_C8000 --type=csv --out C:\ysjung\KISA\data\COLLECT_C8000_csv.csv --fields ctex:version --limit 10
+
+
+
+--each-line
+
+### .json 읽기 예제
+# Python 3에서 json.loads 는 문자열 매개 변수를 사용합니다. 
+# json.load 는 파일과 유사한 객체 매개 변수를 사용합니다. 
+# data_file.read() 는 문자열 객체를 반환
+
+import json
+
+path = 'C:\Users\Jung\Desktop\KISA\data'
+input_file = 'date_C0001.json'
+
+json_data = open(path + "\" + input_file).read()
+data = json.loads(json_data)
+
+for i in data:
+    print(i)
+
+
+### .csv 읽기 예제
+
+import csv
+
+path = 'C:\Users\Jung\Desktop\KISA\data'
+input_file = '*.csv'
+
+csv_file = open()
+reader = csv.reader(csv_file)   # delimiter=',' 옵션
+
+for i in reader:
+    print(i)
+
+
+### csv 로 export
+mongoexport --host 127.0.0.1:27017 --db test --collection date_C0001 --type=csv --out D:\py_test\data\date_C0001.csv
+
+
+### mongorestore
+mongorestore --host 127.0.0.1:27017 --db test --collection date_C0001_1 C:\Users\Jung\Desktop\KISA\data\date_C0001.json
+
+
+### json decoding
+# json 문자열을 python 타입으로 변경
+
