@@ -1,0 +1,110 @@
+https://www.mlsecproject.org
+https://www.mlsecproject.org
+
+
+http://www.covert.io/
+
+
+#########################################
+# Comparison Deep Learning Method to Traditional Methods Using for Network
+Intrusion Detection 
+
+시스템상의 비정상적인 데이터. 이를 달성하기 위해, 검출
+접근 방식은 악성 데이터의 특성을 정의해야합니다.
+
+네트워크 보안에 사용되는 심층 학습의 고전적 방법
+네트워크 침입을 감지하는 데 점점 어려움을 겪고있다.
+이는 데이터 생산이 그에 상응하여 증가하기 때문입니다.
+이와 같이, 깊은 믿음 체계를 사용하는 큰 데이터 분석은
+정보 패턴을 연구
+
+A. 결정 론적 분석
+본질적으로 시스템은 다음과 같은 알려진 원칙에 따라 작동합니다.
+결정 론적 및 확률 론적 기계 학습을 포함합니다.
+결정 론적 기계 학습은 작은 데이터 세트를 사용합니다.
+어떤 정상적인 패턴과의 편차가 있는지 분석됩니다.
+이 정보는 IT 전문가가 평가합니다.
+추가 조사를 위해 사용할 모델을 공식화한다.
+데이터. 일반적으로, 얻어진 정보는
+기준선, 정상적인 수준을 초과하는 데이터는
+침입 행위로 간주된다.
+
+B. 확률 론적 분석
+반면에, 확률 론적 기계 학습은
+더 많은 단계를 거쳐야합니다.
+결정론에서 벗어난 평가
+분석. 중요한 것은 시스템이 클러스터링을 순서대로 사용한다는 것입니다.
+데이터와 관련된 비정상적인 문자를 감지합니다. 그만큼
+시스템은 시스템이 실행되는 감독되지 않은 작업에 의존합니다.
+독립적으로 분석되어 결국지도가 생성됩니다.
+모든 비정상적인 동작에 대해 동일한 기계로
+결과적으로, 접근법은
+평가는 결정적이며 정확한 문제를 정확하게 지적 할 수 있습니다.
+보수적 인 추정치로 90 %를 기록했다.
+
+C. 딥 코딩 네트워크
+깊은 코딩 네트워크 또한 최근에 주목을 받았다.
+깊은 학습에서 갖는 이점으로 인해
+기법. 이 접근 방식은 시스템이
+예측 적이며 새로운 데이터 환경에 적응합니다.
+특히,이 방법은 하향식 접근 방식의 출력을 사용합니다
+이를 상향식 접근법의 입력으로 사용합니다. 에서
+또한 모델은 선형 모델을 사용하여 피쳐를 추출합니다.
+는 다음과 같은 레이어의 구성 요소로 사용됩니다.
+앞뒤에 서로 의존적이다.
+계층 구조로 깊은 시스템 아키텍처를 구성합니다.
+
+2. 12 개 목록(엑셀에 붙일 것)
+##################################################
+collection명,시스템명,유의미element
+C0008,DDoS 사이버대피소,shelter           
+C0009,인터넷연동구간 DDoS대응시스템,ixddos
+C0002,악성코드 은닉사이트 탐지시스템(MCF),MCF
+C0021,이메일 악성코드 유포탐지시스템,emc
+C0006,DNS 싱크홀 시스템,sinkhole
+C0001,허니넷시스템,honeynet
+C0030,웹취약점검 및 보안도구 보급시스템,wsh
+C0027,지능형 스미싱 대응시스템,adsmlist
+C0005,사이버트랩시스템,spamtrap
+C0023,피싱 사이트 탐지시스템,phishing
+C0007,감염PC 사이버치료체계,css
+C8000,C-TAS 시스템,external
+###############################################
+
+
+정적 분석을 할 때에는 보통 해쉬값을 계산한 후 검색엔진이나 악성코드 관련 사이트에 질의를 보냅니다. 
+그리고 파일에서 문자열(Strings) 정보를 추출하여 그 목록을 살펴봅니다. 
+문자열 검색만으로도 해당 파일의 행위를 예측해볼 수 있는 정보를 상당히 얻을 수 있습니다. 
+해당 파일이 난독화(Obfuscation)만 되어있지 않다면, 그 파일에 포함된  
+DNS 정보, IP 주소, 데이터가 저장될 디렉토리 경로 등이 평문으로 남아있을 것입니다.
+
+#####
+정적 분석을 할 때에는 보통 해쉬값을 계산한 후 검색엔진이나 악성코드 관련 사이트에 질의를 보냅니다. 그리고 파일에서 문자열(Strings) 정보를 추출하여 그 목록을 살펴봅니다. 문자열 검색만으로도 해당 파일의 행위를 예측해볼 수 있는 정보를 상당히 얻을 수 있습니다. 해당 파일이 난독화(Obfuscation)만 되어있지 않다면, 그 파일에 포함된  DNS 정보, IP 주소, 데이터가 저장될 디렉토리 경로 등이 평문으로 남아있을 것입니다.
+
+
+###############################################
+Segugio: Efficient Behavior-Based Tracking of Malware-Control Domains in Large ISP Networks Babak Rahbarinia and Manos Antonakakis In Proceedings of IEEE/IFIP International Conference on Dependable Systems and Networks (DSN), 2015
+
+An Epidemiological Study of Malware Encounters in a Large Enterprise Ting-Fang Yen, Victor Heorhiadi, Alina Oprea, Michael K. Reiter, and Ari Juels In Proceedings of ACM Conference on Computer and Communications Security (CCS), 2014
+
+Kopis - Detecting malware domains at the upper dns hierarchy
+
+Malware vs. Big Data (Umbrella Labs)
+
+Automatic Analysis of Malware Behavior using Machine Learning
+
+Selecting Features to Classify Malware by Karthik Raman
+
+Tracking Memory Writes for Malware Classification and Code Reuse Identification
+
+Using File Relationships in Malware Classification
+
+VAMO - Towards a Fully Automated Malware Clustering Validity Analysis
+
+##
+## Malware vs Big Data  --> 36p
+##
+###############################################
+
+
+
