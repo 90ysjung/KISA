@@ -79,3 +79,6 @@ data_sort = sorted(frequency.items(), key=lambda x:x[1], reverse=True)  # 정렬
 print(data_sort)
 
 '''
+
+# http://konlpy.org/ko/v0.4.3/examples/wordcloud/
+
