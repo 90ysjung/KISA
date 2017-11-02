@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 import konlpy
 from konlpy.tag import Twitter
@@ -38,7 +38,8 @@ for i in doc_list_tmp:
 #print(doc_list)
 #print(doc_list_ext)
 
-docs = []   # 모든 문서별 tokens를 list 로 생성
+# 모든 문서별 tokens를 list 로 생성
+docs = []   
 for i in doc_list:
     with io.open(file_path + "\\" + i + '.mlf', 'r', encoding='utf8') as file:
         data = file.read()
@@ -72,8 +73,8 @@ print(tokens)
 # IDF
 # TF*IDF
 #
-# word : 문서별 tokens, list type
-# whole_document : 모든 문서별 tokens, list type
+# doc_tokens : 문서별 tokens를 list로 생성
+# whole_document : 문서별 tokens list(모든문서)의 list를 list로 생성
 
 def n_containing(word, whole_document):
     return sum(1 for doc in whole_document if word in doc )
@@ -92,7 +93,7 @@ def tfidf(doc_tokens, whole_document):
         tf_idf[token] = tf * idf(token, whole_document)
     if (len(doc_tokens)>150):
         tf_idf = sorted(tf_idf.items(), key=operator.itemgetter(1), reverse=True)
-        if( len(tf_idf) > 70 ):
+        if(len(tf_idf) > 70):
             for word in tf_idf[70:]:
                 while (word[0] in doc_tokens):
                     doc_tokens.remove(word[0])
