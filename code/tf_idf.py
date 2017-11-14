@@ -70,15 +70,15 @@ for i in doc_list_ext:
 
     docs_tmp.append(tokens)
      
-    docs = [] 
-    ''' 
-        전체 words 를 하나의 list로 생성하는건지,
-        문서별 word list 를 list 로 생성하는건지
-        모르겠음
-    '''
-    for j in docs_tmp:
-        for k in j:
-            docs.append(k)
+docs = [] 
+''' 
+    전체 words 를 하나의 list로 생성하는건지,
+    문서별 word list 를 list 로 생성하는건지
+    모르겠음
+'''
+for j in docs_tmp:
+    for k in j:
+        docs.append(k)
 
 print(type(docs))
 
