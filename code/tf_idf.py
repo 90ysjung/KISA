@@ -1,5 +1,4 @@
-﻿## 문서별 doc_list 생성
-## for i in doc_list
+## 문서별 doc_list 생성
 
 # -*- coding: utf-8 -*-
 import konlpy
@@ -47,7 +46,7 @@ def text_preprocessing(sentence):
 
 
 # 모든 문서별 tokens를 list 로 생성
-docs_tmp = []   
+docs = []   
 for i in doc_list_ext:
     with io.open(input_path + "\\" + i, 'r', encoding='utf8') as file:
         data = file.read()
@@ -68,9 +67,9 @@ for i in doc_list_ext:
     #tokens = [word for word, part in tokens if part == "Verb" or part == "Adjective" or part == "Noun"]
     #[word for word, part in tokens if part == "Verb" or part == "Adjective" or part == "Noun"]
 
-    docs_tmp.append(tokens)
+    docs.append(tokens)
      
-docs = [] 
+word_dict = [] 
 ''' 
     전체 words 를 하나의 list로 생성하는건지,
     문서별 word list 를 list 로 생성하는건지
@@ -78,13 +77,13 @@ docs = []
 '''
 for j in docs_tmp:
     for k in j:
-        docs.append(k)
+        word_dict.append(k)
 
-print(type(docs))
+print(word_dict)
 
 #pickle 로 저장한다
-with open('docs.txt', 'wb') as f:
-    pickle.dump(docs, f)
+with open('word_dict.txt', 'wb') as f:
+    pickle.dump(word_dict, f)
 
 
 ######### TF-TDF #########
