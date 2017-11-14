@@ -21,7 +21,7 @@ import pytagcloud
 twitter = Twitter()
 
 input_path = "C:\ysjung\KISA\data\TEST"  # input 절대경로
-doc_list_tmp = os.listdir(input_path)    # os.walk 차이점..? 
+doc_list_tmp = os.listdir(input_path)    # os.walk 차이점..?
 
 doc_list_ext = []          # full name
 doc_list = []              # name만(확장자 빼고)
@@ -46,7 +46,7 @@ def text_preprocessing(sentence):
 
 
 # 모든 문서별 tokens를 list 로 생성
-docs = []   
+docs = []
 for i in doc_list_ext:
     with io.open(input_path + "\\" + i, 'r', encoding='utf8') as file:
         data = file.read()
@@ -68,9 +68,9 @@ for i in doc_list_ext:
     #[word for word, part in tokens if part == "Verb" or part == "Adjective" or part == "Noun"]
 
     docs.append(tokens)
-     
-word_dict = [] 
-''' 
+
+word_dict = []
+'''
     전체 words 를 하나의 list로 생성하는건지,
     문서별 word list 를 list 로 생성하는건지
     모르겠음
@@ -79,7 +79,7 @@ for j in docs:
     for k in j:
         word_dict.append(k)
 
-print(word_dict)
+#print(word_dict)
 
 #pickle 로 저장한다
 with open('word_dict.txt', 'wb') as f:
@@ -134,7 +134,7 @@ print('')
 
 # 문서별 words 를 list 로 생성
 # tfidf 호출
-for w in docs:  
+for w in docs:
     print(tfidf(w, docs))
     print('')
 
@@ -143,38 +143,25 @@ for w in docs:
 ###################################################
 import math
 # from text.blob import TextBlob as tb
-
 def tf(word, blob):
     return blob.words.count(word) / len(blob.words)
-
 def n_containing(word, bloblist):
     return sum(1 for blob in bloblist if word in blob)
-
 def idf(word, bloblist):
     return math.log(len(bloblist) / (1 + n_containing(word, bloblist)))
-
 def tfidf(word, blob, bloblist):
     return tf(word, blob) * idf(word, bloblist)
-
-
-
 ###################################################
 # word : dic로 생성 할것 Counter()
 # whole_document : 각문서를 element로 하는 list 로 생성할것
 # doc 별 word 생성하고 doc list(whole_document) 생성한다
-
 def n_containing(word, whole_document):
     return sum(1 for doc in whole_document if word in doc )
-
 def idf(word, whole_document):
     return math.log(len(whole_document) / (1 + n_containing(word, whole_document)))
-
 def tfidf(doc_tokens, whole_document):
-
     tf_idf = {}
-
     token_counts = Counter(doc_tokens)
-
     for token in token_counts:
         tf = token_counts[token] / len(doc_tokens)
         tf_idf[token] = tf * idf(token, whole_document)
@@ -193,14 +180,11 @@ def tfidf(doc_tokens, whole_document):
     #         while (word[0] in doc_tokens):
     #             doc_tokens.remove(word[0])
     return doc_tokens
-
 #######################################################
 import math
-
 def tf(word, doc):
     all_num = sum([doc[key] for key in doc])
     return float(doc[word]) / all_num
-
 def idf(word, doc_list):
     all_num = len(doc_list)
     word_count = 0
@@ -208,11 +192,7 @@ def idf(word, doc_list):
         if word in doc:
             word_count = 1
     return log(all_num / word_count)
-
 def tfidf(word, doc, doc_list):
     score = tf(word, doc) * idf(word, doc_list)
     return score
-
-
 '''
-
