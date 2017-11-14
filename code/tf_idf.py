@@ -75,7 +75,7 @@ word_dict = []
     문서별 word list 를 list 로 생성하는건지
     모르겠음
 '''
-for j in docs_tmp:
+for j in docs:
     for k in j:
         word_dict.append(k)
 
