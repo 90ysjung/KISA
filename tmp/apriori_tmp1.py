@@ -1,4 +1,4 @@
-﻿## 문서별 doc_list 생성
+## 문서별 doc_list 생성
 
 # -*- coding: utf-8 -*-
 import konlpy
@@ -84,11 +84,11 @@ def scanD(D, Ck, minSupport):
     for tid in D:
         for can in Ck:
             if can.issubset(tid):
-                if not can in ssCnt: 
+                if not can in ssCnt:
                     ssCnt[can]=1
-                else: 
+                else:
                     ssCnt[can] += 1
-    numItems = 500    # float(len(D)) , 오류 잡을 것
+    numItems = 10    # float(len(D)) , 오류 잡을 것
     retList = []
     supportData = {}
     for key in ssCnt:
@@ -96,10 +96,49 @@ def scanD(D, Ck, minSupport):
         if support >= minSupport:
             retList.insert(0,key)
         supportData[key] = support
-    return retList, supportData 
+    return retList, supportData
 
-###    
 L1 = scanD(D, C1, 0.5)
-print(L1)
+print(type(L1))
+
+###
+# [1,3,2,5] 를
+# [1,3] [2,5] [2,3] [3,5] 를
+# [2,3,5] 이런식으로 만드는 함수
+def aprioriGen(Lk, k):
+    retList = []
+    lenLk = len(Lk)
+    for i in range(lenLk):
+        for j in range(i+1, lenLk):
+            L1 = list(Lk[i])[:k-2]
+            L2 = list(Lk[j])[:k-2]
+            L1.sort()
+            L2.sort()
+            if L1 == L2:
+                retList.append(Lk[i] | Lk[j])
+    return retList
+
+
+# 특정 지지도 이상의 값들의 쌍을 찾음
+def apriori(dataset, minSupport = 0.5):
+    C1 = createC1(dataset)
+    D = map(set, dataset)
+    L1 ,supportData = scanD(D, C1, minSupport)
+    L = [L1]
+    k=2
+    while (len(L[k-2]) > 0):
+        Ck = aprioriGen(L[k-2],k)
+        Lk, supK = scanD(D, Ck, minSupport)  # 후보그룹을 모두 찾는다.
+        supportData.update(supK)
+        L.append(Lk)                         #이게 핵심!특정 지지도 이상의 그룹들만 L에 담는다.즉 가지치기
+        k += 1
+    return L, supportData
+
+
+x = apriori(docs)
+print(x)
+print(type(x))
+
+
 
 
