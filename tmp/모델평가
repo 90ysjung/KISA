@@ -7,7 +7,8 @@ generated_data() -> get_dga_url = input 개수
 ###################################################
 - accuracy(정확도)
 - precision(정밀도)
-- recall(재현율)
+- recall(재현율) = sensitivility(민감도)
+- fall-out = specificity(특이도)
 
 - roc(Receiver Operationg Characteristic Curve) : 
   특정 진단 방법의 민감도(Sensitivity)와 특이도(Specificity)가 어떤 관계를 갖고 
@@ -17,4 +18,6 @@ generated_data() -> get_dga_url = input 개수
 https://datascienceschool.net/view-notebook/731e0d2ef52c41c686ba53dcaf346f32/
 https://tykimos.github.io/2017/05/22/Evaluation_Talk/
 https://tykimos.github.io/2017/09/24/Custom_Metric/
+
+
 
