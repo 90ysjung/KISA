@@ -16,3 +16,39 @@
 
 
 ################################################
+## 코드 설명
+#################################################
+
+1. 구성
+C:\ysjung\KISA\source\dga_predict_final\run.py 
+-> 한번에 실행하는 실행파일(실제 실행시 이것만 실행하면 됨)
+
+dga_generators 폴더
+-> 보고서에 있는 DGA 생성 모듈과 그 하위 모듈로 구성
+
+dga_classification
+-> 보고서에 있는 분류 모델과 그 하위 모듈로 구성
+
+
+2. 실행방법
+윈도우 cmd 에서
+'C:\ysjung\KISA\source\dga_predict_final\run.py'
+실행한다
+
+
+3. 결과
+C:\ysjung\KISA\source\dga_predict_final 에
+ROC 결과가 떨어진다
+
+C:\ysjung\KISA\source\dga_predict_final\dga_classification\data 에
+학습 데이터와 결과 데이터가 pickle 로 떨어진다
+
+
+4. 주의 
+재 실행시 해당 폴더의 *.pkl 를 삭제한다(ROC 는 overwrite 됨)
+'C:\ysjung\KISA\source\dga_predict_final\dga_classification\data\*.pkl'
+
+pkl 이 존재하면 학습을 skip 하게 설계 됨
+
+###########################################################################
+
