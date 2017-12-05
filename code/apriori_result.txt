@@ -1,0 +1,92 @@
+============== 연관분석 결과 ==============
+빈번집합 모음:[[frozenset({'949e2ca0d2c..........5fc98903d5f'}), frozenset({'WanaCrypt0r'}), frozenset({'DisableSystemProxy'}), frozenset({'1'}), frozenset({'HttpNoUserAgent'})], [frozenset({'1', 'HttpNoUserAgent'}), frozenset({'DisableSystemProxy', '949e2ca0d2c..........5fc98903d5f'}), frozenset({'1', 'WanaCrypt0r'}), frozenset({'DisableSystemProxy', 'HttpNoUserAgent'}), frozenset({'949e2ca0d2c..........5fc98903d5f', 'WanaCrypt0r'}), frozenset({'DisableSystemProxy', 'WanaCrypt0r'}), frozenset({'DisableSystemProxy', '1'}), frozenset({'HttpNoUserAgent', 'WanaCrypt0r'}), frozenset({'949e2ca0d2c..........5fc98903d5f', 'HttpNoUserAgent'}), frozenset({'949e2ca0d2c..........5fc98903d5f', '1'})], [frozenset({'HttpNoUserAgent', '949e2ca0d2c..........5fc98903d5f', 'WanaCrypt0r'}), frozenset({'DisableSystemProxy', '1', 'HttpNoUserAgent'}), frozenset({'WanaCrypt0r', 'DisableSystemProxy', 'HttpNoUserAgent'}), frozenset({'949e2ca0d2c..........5fc98903d5f', '1', 'HttpNoUserAgent'}), frozenset({'WanaCrypt0r', '1', 'HttpNoUserAgent'}), frozenset({'DisableSystemProxy', '1', 'WanaCrypt0r'}), frozenset({'949e2ca0d2c..........5fc98903d5f', '1', 'WanaCrypt0r'}), frozenset({'DisableSystemProxy', '949e2ca0d2c..........5fc98903d5f', '1'}), frozenset({'DisableSystemProxy', '949e2ca0d2c..........5fc98903d5f', 'WanaCrypt0r'}), frozenset({'DisableSystemProxy', '949e2ca0d2c..........5fc98903d5f', 'HttpNoUserAgent'})], [frozenset({'WanaCrypt0r', '1', '949e2ca0d2c..........5fc98903d5f', 'HttpNoUserAgent'}), frozenset({'1', '949e2ca0d2c..........5fc98903d5f', 'DisableSystemProxy', 'WanaCrypt0r'}), frozenset({'1', '949e2ca0d2c..........5fc98903d5f', 'DisableSystemProxy', 'HttpNoUserAgent'}), frozenset({'WanaCrypt0r', '1', 'DisableSystemProxy', 'HttpNoUserAgent'}), frozenset({'HttpNoUserAgent', '949e2ca0d2c..........5fc98903d5f', 'DisableSystemProxy', 'WanaCrypt0r'})], [frozenset({'949e2ca0d2c..........5fc98903d5f', 'HttpNoUserAgent', '1', 'DisableSystemProxy', 'WanaCrypt0r'})], []]
+
+============== 지지도 ==============
+suppData:{frozenset({'WanaCrypt0r', '1', 'DisableSystemProxy', 'HttpNoUserAgent'}): 1.2, frozenset({'1'}): 0.01, frozenset({'DisableSystemProxy', '1'}): 1.29, frozenset({'949e2ca0d2c..........5fc98903d5f', 'WanaCrypt0r'}): 0.01, frozenset({'949e2ca0d2c..........5fc98903d5f', 'HttpNoUserAgent', '1', 'DisableSystemProxy', 'WanaCrypt0r'}): 0.01, frozenset({'DisableSystemProxy', '949e2ca0d2c..........5fc98903d5f', 'WanaCrypt0r'}): 0.01, frozenset({'HttpNoUserAgent'}): 0.01, frozenset({'1', 'WanaCrypt0r'}): 1.99, frozenset({'DisableSystemProxy', '949e2ca0d2c..........5fc98903d5f'}): 0.01, frozenset({'DisableSystemProxy'}): 0.01, frozenset({'WanaCrypt0r', '1', 'HttpNoUserAgent'}): 1.21, frozenset({'WanaCrypt0r', '1', '949e2ca0d2c..........5fc98903d5f', 'HttpNoUserAgent'}): 0.01, frozenset({'DisableSystemProxy', '949e2ca0d2c..........5fc98903d5f', 'HttpNoUserAgent'}): 0.01, frozenset({'949e2ca0d2c..........5fc98903d5f', 'HttpNoUserAgent'}): 0.01, frozenset({'DisableSystemProxy', '1', 'HttpNoUserAgent'}): 1.2, frozenset({'1', '949e2ca0d2c..........5fc98903d5f', 'DisableSystemProxy', 'WanaCrypt0r'}): 0.01, frozenset({'DisableSystemProxy', '949e2ca0d2c..........5fc98903d5f', '1'}): 0.01, frozenset({'HttpNoUserAgent', '949e2ca0d2c..........5fc98903d5f', 'WanaCrypt0r'}): 0.01, frozenset({'WanaCrypt0r', 'DisableSystemProxy', 'HttpNoUserAgent'}): 1.2, frozenset({'949e2ca0d2c..........5fc98903d5f', '1', 'HttpNoUserAgent'}): 0.01, frozenset({'949e2ca0d2c..........5fc98903d5f'}): 0.01, frozenset({'HttpNoUserAgent', '949e2ca0d2c..........5fc98903d5f', 'DisableSystemProxy', 'WanaCrypt0r'}): 0.01, frozenset({'DisableSystemProxy', 'HttpNoUserAgent'}): 1.2, frozenset({'1', '949e2ca0d2c..........5fc98903d5f', 'DisableSystemProxy', 'HttpNoUserAgent'}): 0.01, frozenset({'949e2ca0d2c..........5fc98903d5f', '1', 'WanaCrypt0r'}): 0.01, frozenset({'HttpNoUserAgent', 'WanaCrypt0r'}): 1.21, frozenset({'949e2ca0d2c..........5fc98903d5f', '1'}): 0.01, frozenset({'DisableSystemProxy', 'WanaCrypt0r'}): 1.29, frozenset({'WanaCrypt0r'}): 0.01, frozenset({'1', 'HttpNoUserAgent'}): 1.21, frozenset({'DisableSystemProxy', '1', 'WanaCrypt0r'}): 1.29}
+frozenset({'HttpNoUserAgent'}) --> frozenset({'1'}) conf: 121.0
+frozenset({'1'}) --> frozenset({'HttpNoUserAgent'}) conf: 121.0
+frozenset({'949e2ca0d2c..........5fc98903d5f'}) --> frozenset({'DisableSystemProxy'}) conf: 1.0
+frozenset({'DisableSystemProxy'}) --> frozenset({'949e2ca0d2c..........5fc98903d5f'}) conf: 1.0
+frozenset({'WanaCrypt0r'}) --> frozenset({'1'}) conf: 199.0
+frozenset({'1'}) --> frozenset({'WanaCrypt0r'}) conf: 199.0
+frozenset({'HttpNoUserAgent'}) --> frozenset({'DisableSystemProxy'}) conf: 120.0
+frozenset({'DisableSystemProxy'}) --> frozenset({'HttpNoUserAgent'}) conf: 120.0
+frozenset({'WanaCrypt0r'}) --> frozenset({'949e2ca0d2c..........5fc98903d5f'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f'}) --> frozenset({'WanaCrypt0r'}) conf: 1.0
+frozenset({'WanaCrypt0r'}) --> frozenset({'DisableSystemProxy'}) conf: 129.0
+frozenset({'DisableSystemProxy'}) --> frozenset({'WanaCrypt0r'}) conf: 129.0
+frozenset({'1'}) --> frozenset({'DisableSystemProxy'}) conf: 129.0
+frozenset({'DisableSystemProxy'}) --> frozenset({'1'}) conf: 129.0
+frozenset({'WanaCrypt0r'}) --> frozenset({'HttpNoUserAgent'}) conf: 121.0
+frozenset({'HttpNoUserAgent'}) --> frozenset({'WanaCrypt0r'}) conf: 121.0
+frozenset({'HttpNoUserAgent'}) --> frozenset({'949e2ca0d2c..........5fc98903d5f'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f'}) --> frozenset({'HttpNoUserAgent'}) conf: 1.0
+frozenset({'1'}) --> frozenset({'949e2ca0d2c..........5fc98903d5f'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f'}) --> frozenset({'1'}) conf: 1.0
+frozenset({'WanaCrypt0r'}) --> frozenset({'949e2ca0d2c..........5fc98903d5f', 'HttpNoUserAgent'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f'}) --> frozenset({'WanaCrypt0r', 'HttpNoUserAgent'}) conf: 1.0
+frozenset({'HttpNoUserAgent'}) --> frozenset({'949e2ca0d2c..........5fc98903d5f', 'WanaCrypt0r'}) conf: 1.0
+frozenset({'HttpNoUserAgent'}) --> frozenset({'DisableSystemProxy', '1'}) conf: 120.0
+frozenset({'1'}) --> frozenset({'DisableSystemProxy', 'HttpNoUserAgent'}) conf: 120.0
+frozenset({'DisableSystemProxy'}) --> frozenset({'1', 'HttpNoUserAgent'}) conf: 120.0
+frozenset({'HttpNoUserAgent'}) --> frozenset({'DisableSystemProxy', 'WanaCrypt0r'}) conf: 120.0
+frozenset({'DisableSystemProxy'}) --> frozenset({'HttpNoUserAgent', 'WanaCrypt0r'}) conf: 120.0
+frozenset({'WanaCrypt0r'}) --> frozenset({'DisableSystemProxy', 'HttpNoUserAgent'}) conf: 120.0
+frozenset({'HttpNoUserAgent'}) --> frozenset({'949e2ca0d2c..........5fc98903d5f', '1'}) conf: 1.0
+frozenset({'1'}) --> frozenset({'949e2ca0d2c..........5fc98903d5f', 'HttpNoUserAgent'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f'}) --> frozenset({'1', 'HttpNoUserAgent'}) conf: 1.0
+frozenset({'HttpNoUserAgent'}) --> frozenset({'1', 'WanaCrypt0r'}) conf: 121.0
+frozenset({'1'}) --> frozenset({'HttpNoUserAgent', 'WanaCrypt0r'}) conf: 121.0
+frozenset({'WanaCrypt0r'}) --> frozenset({'1', 'HttpNoUserAgent'}) conf: 121.0
+frozenset({'WanaCrypt0r'}) --> frozenset({'DisableSystemProxy', '1'}) conf: 129.0
+frozenset({'1'}) --> frozenset({'DisableSystemProxy', 'WanaCrypt0r'}) conf: 129.0
+frozenset({'DisableSystemProxy'}) --> frozenset({'1', 'WanaCrypt0r'}) conf: 129.0
+frozenset({'WanaCrypt0r'}) --> frozenset({'949e2ca0d2c..........5fc98903d5f', '1'}) conf: 1.0
+frozenset({'1'}) --> frozenset({'949e2ca0d2c..........5fc98903d5f', 'WanaCrypt0r'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f'}) --> frozenset({'1', 'WanaCrypt0r'}) conf: 1.0
+frozenset({'1'}) --> frozenset({'DisableSystemProxy', '949e2ca0d2c..........5fc98903d5f'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f'}) --> frozenset({'DisableSystemProxy', '1'}) conf: 1.0
+frozenset({'DisableSystemProxy'}) --> frozenset({'949e2ca0d2c..........5fc98903d5f', '1'}) conf: 1.0
+frozenset({'WanaCrypt0r'}) --> frozenset({'DisableSystemProxy', '949e2ca0d2c..........5fc98903d5f'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f'}) --> frozenset({'DisableSystemProxy', 'WanaCrypt0r'}) conf: 1.0
+frozenset({'DisableSystemProxy'}) --> frozenset({'949e2ca0d2c..........5fc98903d5f', 'WanaCrypt0r'}) conf: 1.0
+frozenset({'HttpNoUserAgent'}) --> frozenset({'DisableSystemProxy', '949e2ca0d2c..........5fc98903d5f'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f'}) --> frozenset({'DisableSystemProxy', 'HttpNoUserAgent'}) conf: 1.0
+frozenset({'DisableSystemProxy'}) --> frozenset({'949e2ca0d2c..........5fc98903d5f', 'HttpNoUserAgent'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f', 'HttpNoUserAgent'}) --> frozenset({'1', 'WanaCrypt0r'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f', '1'}) --> frozenset({'HttpNoUserAgent', 'WanaCrypt0r'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f', 'WanaCrypt0r'}) --> frozenset({'1', 'HttpNoUserAgent'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f'}) --> frozenset({'HttpNoUserAgent', '1', 'WanaCrypt0r'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f', 'WanaCrypt0r'}) --> frozenset({'DisableSystemProxy', '1'}) conf: 1.0
+frozenset({'DisableSystemProxy', '949e2ca0d2c..........5fc98903d5f'}) --> frozenset({'1', 'WanaCrypt0r'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f', '1'}) --> frozenset({'DisableSystemProxy', 'WanaCrypt0r'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f'}) --> frozenset({'DisableSystemProxy', '1', 'WanaCrypt0r'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f', 'HttpNoUserAgent'}) --> frozenset({'DisableSystemProxy', '1'}) conf: 1.0
+frozenset({'DisableSystemProxy', '949e2ca0d2c..........5fc98903d5f'}) --> frozenset({'1', 'HttpNoUserAgent'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f', '1'}) --> frozenset({'DisableSystemProxy', 'HttpNoUserAgent'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f'}) --> frozenset({'DisableSystemProxy', '1', 'HttpNoUserAgent'}) conf: 1.0
+frozenset({'DisableSystemProxy', 'HttpNoUserAgent'}) --> frozenset({'1', 'WanaCrypt0r'}) conf: 1.0
+frozenset({'1', 'HttpNoUserAgent'}) --> frozenset({'DisableSystemProxy', 'WanaCrypt0r'}) conf: 0.9917355371900827
+frozenset({'DisableSystemProxy', '1'}) --> frozenset({'HttpNoUserAgent', 'WanaCrypt0r'}) conf: 0.9302325581395349
+frozenset({'HttpNoUserAgent', 'WanaCrypt0r'}) --> frozenset({'DisableSystemProxy', '1'}) conf: 0.9917355371900827
+frozenset({'DisableSystemProxy', 'WanaCrypt0r'}) --> frozenset({'1', 'HttpNoUserAgent'}) conf: 0.9302325581395349
+frozenset({'1', 'WanaCrypt0r'}) --> frozenset({'DisableSystemProxy', 'HttpNoUserAgent'}) conf: 0.6030150753768844
+frozenset({'DisableSystemProxy'}) --> frozenset({'HttpNoUserAgent', '1', 'WanaCrypt0r'}) conf: 120.0
+frozenset({'HttpNoUserAgent'}) --> frozenset({'DisableSystemProxy', '1', 'WanaCrypt0r'}) conf: 120.0
+frozenset({'1'}) --> frozenset({'HttpNoUserAgent', 'DisableSystemProxy', 'WanaCrypt0r'}) conf: 120.0
+frozenset({'WanaCrypt0r'}) --> frozenset({'DisableSystemProxy', '1', 'HttpNoUserAgent'}) conf: 120.0
+frozenset({'949e2ca0d2c..........5fc98903d5f', 'WanaCrypt0r'}) --> frozenset({'DisableSystemProxy', 'HttpNoUserAgent'}) conf: 1.0
+frozenset({'DisableSystemProxy', '949e2ca0d2c..........5fc98903d5f'}) --> frozenset({'WanaCrypt0r', 'HttpNoUserAgent'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f', 'HttpNoUserAgent'}) --> frozenset({'DisableSystemProxy', 'WanaCrypt0r'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f'}) --> frozenset({'WanaCrypt0r', 'DisableSystemProxy', 'HttpNoUserAgent'}) conf: 1.0
+frozenset({'DisableSystemProxy', '949e2ca0d2c..........5fc98903d5f', 'WanaCrypt0r'}) --> frozenset({'1', 'HttpNoUserAgent'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f', '1', 'WanaCrypt0r'}) --> frozenset({'DisableSystemProxy', 'HttpNoUserAgent'}) conf: 1.0
+frozenset({'DisableSystemProxy', '949e2ca0d2c..........5fc98903d5f', '1'}) --> frozenset({'WanaCrypt0r', 'HttpNoUserAgent'}) conf: 1.0
+frozenset({'WanaCrypt0r', '949e2ca0d2c..........5fc98903d5f', 'HttpNoUserAgent'}) --> frozenset({'DisableSystemProxy', '1'}) conf: 1.0
+frozenset({'DisableSystemProxy', '949e2ca0d2c..........5fc98903d5f', 'HttpNoUserAgent'}) --> frozenset({'1', 'WanaCrypt0r'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f', '1', 'HttpNoUserAgent'}) --> frozenset({'DisableSystemProxy', 'WanaCrypt0r'}) conf: 1.0
+frozenset({'DisableSystemProxy', '949e2ca0d2c..........5fc98903d5f'}) --> frozenset({'WanaCrypt0r', '1', 'HttpNoUserAgent'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f', 'WanaCrypt0r'}) --> frozenset({'DisableSystemProxy', '1', 'HttpNoUserAgent'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f', '1'}) --> frozenset({'WanaCrypt0r', 'DisableSystemProxy', 'HttpNoUserAgent'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f', 'HttpNoUserAgent'}) --> frozenset({'DisableSystemProxy', '1', 'WanaCrypt0r'}) conf: 1.0
+frozenset({'949e2ca0d2c..........5fc98903d5f'}) --> frozenset({'WanaCrypt0r', '1', 'DisableSystemProxy', 'HttpNoUserAgent'}) conf: 1.0
