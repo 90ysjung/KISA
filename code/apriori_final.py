@@ -106,7 +106,7 @@ def aprioriGen(Lk, k):
 
 
 # 특정 지지도 이상의 값들의 쌍을 찾음
-def apriori(dataset, minSupport = 0.01):     # 지지도 설정
+def apriori(dataset, minSupport = 0.1):     # 최소 지지도 설정
     C1 = createC1(dataset)
     D = map(set, dataset)
     D = list(D)
@@ -128,7 +128,7 @@ def apriori(dataset, minSupport = 0.01):     # 지지도 설정
 
 
 #####
-def generateRules(L, supportData, minConf=0.5):
+def generateRules(L, supportData, minConf=0.1):    # 최소 신뢰도 설정
     bigRuleList = []
     for i in range(1, len(L)):
         for freqSet in L[i]:
@@ -140,7 +140,7 @@ def generateRules(L, supportData, minConf=0.5):
 
     return bigRuleList
 
-def calcConf(freqSet, H, supportData, br1, minConf=0.5):
+def calcConf(freqSet, H, supportData, br1, minConf=0.1):
     prunedH = []
     for conseq in H:
         conf = supportData[freqSet] / supportData[freqSet-conseq]
@@ -151,7 +151,7 @@ def calcConf(freqSet, H, supportData, br1, minConf=0.5):
 
     return prunedH
 
-def rulesFromConseq(freqSet, H, supportData, br1, minConf=0.5):
+def rulesFromConseq(freqSet, H, supportData, br1, minConf=0.1):
     m = len(H[0])
     if (len(freqSet) > (m + 1)):
         Hmp1 = aprioriGen(H, m+1)
@@ -165,7 +165,7 @@ if __name__ == "__main__":
     dataset = docs_dict
     L, suppData = apriori(dataset)
     print("빈번집합 모음:" + str(L) + "\n")
-    print("============== 지지도 ==============")
+    print("============== 지지도 0.1 이상 집합 및 신뢰도 ==============")
     print("suppData:" + str(suppData))
 
-    rules = generateRules(L, suppData, minConf=0.5)
+    rules = generateRules(L, suppData, minConf=0.1)
