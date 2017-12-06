@@ -10,14 +10,15 @@
    2.1 DGA를 적용한 악성 도메인 분류기 및 알고리즘 성능비교.doc
    2.2 dga_predict_final.zip
    2.3 위협정보 수집과 분석 기대 효과.doc
-   2.4 apriori_tmp31.py
+   2.4 apriori_final.py
 
-** 2.3, 2.4 는 최종본 아님. 현재 작업중
+** 2.3, 2.4 는 최종본 아님. 현재 작업중 --> 20171206 완료 및 제출
 
 
 ################################################
 ## 코드 설명
-#################################################
+## run.py 
+################################################# 
 
 1. 구성
 C:\ysjung\KISA\source\dga_predict_final\run.py 
@@ -33,7 +34,11 @@ dga_classification
 2. 실행방법
 윈도우 cmd 에서
 'C:\ysjung\KISA\source\dga_predict_final\run.py'
-실행한다
+실행한다 
+
+프로그램 내부에서 악성코드 생성 개수를 설정한다 
+data_generator.py
+generated_data() -> get_dga_url = input 개수
 
 
 3. 결과
@@ -50,5 +55,32 @@ C:\ysjung\KISA\source\dga_predict_final\dga_classification\data 에
 
 pkl 이 존재하면 학습을 skip 하게 설계 됨
 
-###########################################################################
+#################################################
+## apriori_final.py
+#################################################
+
+1. 구성
+C:\ysjung\KISA\data\autofocus\sample_300_merge_c_edit.csv
+-> Input data 절대경로 
+
+C:\ysjung\KISA\source\apriori_final.py 
+-> 한번에 실행하는 코드(실제 실행시 이것만 실행하면 됨)
+
+2. 실행방법
+윈도우 cmd 에서
+'C:\ysjung\KISA\source\apriori_final.py '
+실행한다
+
+프로그램 내부에서 지지도 및 신뢰도 설정한다
+주석 달아놨음
+
+
+3. 결과
+실행후 화면에 출력한다
+결과를 파일로 뽑으려면 리다이렉션으로 뺀다
+
+
+####################################################
+
+
 
